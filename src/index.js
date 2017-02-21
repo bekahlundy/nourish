@@ -1,22 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import { browserHistory, Router, Route } from 'react-router';
-import rootReducer from './reducers';
+import { AppContainer as HotReloader } from 'react-hot-loader'
+import { browserHistory, Router, Route } from 'react-router-dom';
 import App from './components/App';
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+require('./styles/base.scss');
 
-const store = createStore(rootReducer, devTools);
 
-const router = (
-  <Provider store={store}>
-    <Router history={browserHistory} >
-      <Route path='/' component={App}>
-      </Route>
-    </Router>
-  </Provider>
-)
 
-ReactDOM.render(router, document.getElementById('root'))
+const rootElement = document.getElementById('root')
+ReactDOM.render(
+  <HotReloader>
+    <App />
+  </HotReloader>, rootElement)
+
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    ReactDOM.render(
+      <HotReloader>
+        <App />
+      </HotReloader>, rootElement)
+  })
+}
