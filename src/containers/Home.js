@@ -1,4 +1,6 @@
 import { connect } from 'react-redux';
+import { addStuff } from '../actions';
+import Home from '../components/Home';
 
 const mapStateToProps = state => {
   // return an object of redux store data
@@ -7,9 +9,11 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  // return an object of methods you'd like
-  // to dispatch as redux actions
-  return {};
+  return {
+    addStuff: (data) => {
+      dispatch(addStuff(data))
+    }
+  };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
