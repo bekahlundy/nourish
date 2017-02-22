@@ -1,0 +1,20 @@
+.input-feild {
+  height: 25px;
+  display: block;
+  font-size: 14px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.categorybutton-container {
+  display: block;
+}
+
+.physical-btn, .emotional-btn, .mental-btn, .spiritual-btn {
+  margin: 10px;
+  border: none;
+  background-color: lightblue;
+    &:hover {
+      background-color: gray;
+    }
+}
