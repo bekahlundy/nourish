@@ -1,21 +1,14 @@
 import React from 'react';
+import GoalList from '../containers/GoalListContainer';
+import Form from '../containers/Form';
 
 export default class Home extends React.Component {
-
-  constructor() {
-    super();
-    this.doStuff = this.doStuff.bind(this);
-  }
-
-  doStuff() {
-    this.props.addStuff({blah: 'hello world'});
-  }
 
   render() {
     return (
       <div>
-        <p>Hey!</p>
-      <button onClick={this.doStuff}>Click me</button>
+        <Form />
+        <GoalList />
       </div>
     )
   }
