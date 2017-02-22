@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormButton = ({title, onclick, className}) => {
+const FormButton = ({title, className}) => {
   return (
     <div className='inputcategorybutton-div'>
       <button

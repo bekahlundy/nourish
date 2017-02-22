@@ -6,9 +6,9 @@ export const addGoal = (text, id) => {
   };
 };
 
-export const toggleButton = (id) => {
+export const toggleGoal = (id) => {
   return {
-    type: 'TOGGLE_BUTTON',
+    type: 'TOGGLE_GOAL',
     id,
   };
 };
