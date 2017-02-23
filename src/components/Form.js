@@ -9,13 +9,9 @@ export default class Form extends Component {
   }
   render() {
     const { handleSubmit, goals } = this.props;
-    
+
   return (
     <div>
-      <form onSubmit={(e) => {
-        e.preventDefault()
-        handleSubmit(this.state.text)
-          }}>
       <input
         value={this.state.text}
         placeholder='Goal'
@@ -36,8 +32,10 @@ export default class Form extends Component {
           title='Spiritual'
           className='spiritual-btn'/>
       </div>
-      <button>Add</button>
-    </form>
+      <button
+        onClick={() => {
+        handleSubmit(this.state.text)
+          }}>Add</button>
     </div>
   )
 }
