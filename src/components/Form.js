@@ -5,7 +5,9 @@ import FormButton from './FormButton'
 export default class Form extends Component {
   constructor(props) {
     super(props)
-    this.state = { text: '' }
+    this.state = {
+      text: ''
+    }
   }
   render() {
     const { handleSubmit, goals } = this.props;

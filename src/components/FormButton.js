@@ -5,7 +5,7 @@ const FormButton = ({title, className}) => {
     <div className='formbutton-div'>
       <button
         className={className}
-        onClick={() => console.log('clicked' ,{title})}>{title}</button>
+        onClick={() => console.log({title})}>{title}</button>
     </div>
   )
 }
