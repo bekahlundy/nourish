@@ -6,7 +6,7 @@ const GoalList = ({ goals, onGoalClick }) => {
   if (goals.length === 0) {
   return (
     <div className='goallist-container'>
-       <h3>You have nothing to do!</h3>
+       <h3>Add Items!</h3>
        <ProgressBar />
     </div>
   )

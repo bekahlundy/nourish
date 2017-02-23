@@ -2,7 +2,7 @@ import React from 'react';
 
 const FormButton = ({title, className}) => {
   return (
-    <div className='inputcategorybutton-div'>
+    <div className='formbutton-div'>
       <button
         className={className}
         onClick={() => console.log('clicked' ,{title})}>{title}</button>
