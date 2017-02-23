@@ -1,23 +1,32 @@
 import React from 'react'
 import Goal from './Goal'
+import ProgressBar from './ProgressBar'
 
 const GoalList = ({ goals, onGoalClick }) => {
   if (goals.length === 0) {
-  return <h3>You have nothing to do!</h3>
+  return (
+    <div className='goallist-container'>
+       <h3>You have nothing to do!</h3>
+       <ProgressBar />
+    </div>
+  )
 }
 
 return(
-  <ul>
-  { goals.map(goal => {
-    return (
-      <Goal
-        key={goal.id}
-        {...goal}
-        handleClick={() => onGoalClick(goal.id)}
-      />
-    )
-  }) }
-  </ul>
+  <div className='goallist-container'>
+    <p>
+    { goals.map(goal => {
+      return (
+        <Goal
+          key={goal.id}
+          {...goal}
+          handleClick={() => onGoalClick(goal.id)}
+        />
+      )
+    }) }
+    <ProgressBar />
+  </p>
+</div>
 )
 }
 
