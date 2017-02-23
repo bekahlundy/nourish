@@ -9,6 +9,9 @@ export default class Form extends Component {
       text: ''
     }
   }
+handleToggle() {
+  console.log('click')
+}
   render() {
     const { handleSubmit, goals } = this.props;
 
@@ -23,16 +26,20 @@ export default class Form extends Component {
       <div className='categorybutton-container'>
         <FormButton
           title='Physical'
-          className='physical-btn'/>
+          className='physical-btn'
+          onClick={this.handleToggle.bind(this)}/>
         <FormButton
           title='Emotional'
-          className='emotional-btn'/>
+          className='emotional-btn'
+          onClick={this.handleToggle.bind(this)}/>
         <FormButton
           title='Mental'
-          className='mental-btn'/>
+          className='mental-btn'
+          onClick={this.handleToggle.bind(this)}/>
         <FormButton
           title='Spiritual'
-          className='spiritual-btn'/>
+          className='spiritual-btn'
+          onClick={this.handleToggle.bind(this)}/>
       </div>
       <button
         onClick={() => {
