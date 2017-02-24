@@ -1,8 +1,8 @@
-export const addGoal = (text, id) => {
+export const addGoal = (text, label) => {
   return {
     type: 'ADD_GOAL',
     text,
-    id
+    label
   };
 };
 
@@ -10,12 +10,5 @@ export const toggleGoal = (id) => {
   return {
     type: 'TOGGLE_GOAL',
     id
-  };
-};
-
-export const toggleWellness = (title) => {
-  return {
-    type: 'TOGGLE_WELLNESS',
-    title
   };
 };

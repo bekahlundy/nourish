@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import FormButton from './FormButton'
+import FormButton from './FormButton';
 
 
 export default class Form extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      text: ''
+      text: '',
+      label: ''
     }
   }
-handleToggle() {
-  console.log('click')
-}
-  render() {
-    const { handleSubmit, goals } = this.props;
 
+  render() {
+    const { handleSubmit, goals, handleToggle } = this.props;
   return (
     <div>
       <input
@@ -27,23 +25,23 @@ handleToggle() {
         <FormButton
           title='Physical'
           className='physical-btn'
-          onClick={this.handleToggle.bind(this)}/>
+          handleClick={ () => this.setState({ label: 'physical' }) } />
         <FormButton
           title='Emotional'
           className='emotional-btn'
-          onClick={this.handleToggle.bind(this)}/>
+          handleClick={ () => this.setState({ label: 'emotional' }) }/>
         <FormButton
           title='Mental'
           className='mental-btn'
-          onClick={this.handleToggle.bind(this)}/>
+          handleClick={ () => this.setState({ label: 'mental' }) }/>
         <FormButton
           title='Spiritual'
           className='spiritual-btn'
-          onClick={this.handleToggle.bind(this)}/>
+          handleClick={ () => this.setState({ label: 'spiritual' }) }/>
       </div>
       <button
         onClick={() => {
-        handleSubmit(this.state.text)
+        handleSubmit({ text: this.state.text, label: this.state.label })
           }}>Add</button>
     </div>
   )

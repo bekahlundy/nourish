@@ -7,7 +7,7 @@ const Goal = ({ handleClick, completed, text }) => {
       style={
       { textDecoration: completed ? 'line-through' : 'none' }
     }>
-      { text }
+      { text.text }
     </p>
   )
 }

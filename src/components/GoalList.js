@@ -11,7 +11,7 @@ const GoalList = ({ goals, onGoalClick }) => {
     </div>
   )
 }
-
+ console.log(goals)
 return(
   <div className='goallist-container'>
     <p>

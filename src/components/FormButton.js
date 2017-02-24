@@ -1,11 +1,11 @@
 import React from 'react';
 
-const FormButton = ({title, className, onClick}) => {
+const FormButton = ({title, className, handleClick}) => {
   return (
     <div className='formbutton-div'>
       <button
         className={className}
-        onClick={onClick}>{title}</button>
+        onClick={handleClick}>{title}</button>
     </div>
   )
 }
