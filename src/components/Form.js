@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import FormButton from './FormButton'
+import FormButton from './FormButton';
 
 
 export default class Form extends Component {
   constructor(props) {
     super(props)
-    this.state = { text: '' }
+    this.state = {
+      text: '',
+      label: ''
+    }
   }
+
   render() {
-    const { handleSubmit, goals } = this.props;
-    
+    const { handleSubmit, goals, handleToggle } = this.props;
   return (
     <div>
-      <form onSubmit={(e) => {
-        e.preventDefault()
-        handleSubmit(this.state.text)
-          }}>
       <input
         value={this.state.text}
         placeholder='Goal'
@@ -25,19 +24,25 @@ export default class Form extends Component {
       <div className='categorybutton-container'>
         <FormButton
           title='Physical'
-          className='physical-btn'/>
+          className='physical-btn'
+          handleClick={ () => this.setState({ label: 'physical' }) } />
         <FormButton
           title='Emotional'
-          className='emotional-btn'/>
+          className='emotional-btn'
+          handleClick={ () => this.setState({ label: 'emotional' }) }/>
         <FormButton
           title='Mental'
-          className='mental-btn'/>
+          className='mental-btn'
+          handleClick={ () => this.setState({ label: 'mental' }) }/>
         <FormButton
           title='Spiritual'
-          className='spiritual-btn'/>
+          className='spiritual-btn'
+          handleClick={ () => this.setState({ label: 'spiritual' }) }/>
       </div>
-      <button>Add</button>
-    </form>
+      <button
+        onClick={() => {
+        handleSubmit({ text: this.state.text, label: this.state.label })
+          }}>Add</button>
     </div>
   )
 }

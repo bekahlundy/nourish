@@ -2,7 +2,9 @@
 @import 'Form';
 @import 'FormButton';
 @import 'GoalList';
+@import 'Goal';
 @import 'ProgressBar';
+@import 'reset';
 
 html {
   background: #FFF;
@@ -13,4 +15,11 @@ body {
   font-weight: lighter;
   text-align: center;
   color: #000;
+}
+
+.title {
+  font: menu;
+  font-size: 50px;
+  font-weight: 300;
+  margin: 20px;
 }
