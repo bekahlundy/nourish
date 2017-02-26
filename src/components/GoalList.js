@@ -14,7 +14,7 @@ const GoalList = ({ goals, onGoalClick }) => {
  console.log(goals)
 return(
   <div className='goallist-container'>
-    <p>
+    <ul>
     { goals.map(goal => {
       return (
         <Goal
@@ -25,7 +25,7 @@ return(
       )
     }) }
     <ProgressBar />
-  </p>
+  </ul>
 </div>
 )
 }

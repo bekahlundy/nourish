@@ -1,11 +1,9 @@
 const goals = (state=[], action) => {
-  // { {title: 'hello', label: 'physical'}}
   switch (action.type) {
     case 'ADD_GOAL':
       return [...state,
               { id: Date.now(),
                text: action.text,
-               wellness: action.label,
                completed: false }
             ];
     case 'TOGGLE_GOAL':

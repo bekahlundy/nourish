@@ -16,6 +16,7 @@ const Root = () => (
   <Provider store={store}>
     <Router>
       <div>
+        <h1 className='title'>Nourish</h1>
         <nav>
           <Link to='/'>Home</Link>
           <Link to='/about'>About</Link>
