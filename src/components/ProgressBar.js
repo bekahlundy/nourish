@@ -1,16 +1,22 @@
 import React from 'react'
 
-const ProgressBar = () => {
+const ProgressBar = ({ width, height, physicalNum, emotionalNum, mentalNum, spiritualNum, total }) => {
+  const physicalWidth = width * (physicalNum / total);
+  const emotionalWidth = width * (emotionalNum / total);
+  const mentalWidth = width * (mentalNum / total);
+  const spiritualWidth = width * (spiritualNum / total);
+
+
   return (
-    <div className='progressbar-container'>
-      <svg width="90%" height="40" viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg">
-  <g>
-    <rect fill="#D0011B" x="0" y="0" width="300" height="40" />
-    <rect fill="#50E3C2" x="300" y="0" width="300" height="40" />
-  </g>
-</svg>
-    </div>
-  )
+    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <rect fill="#DC1020" x={0} y={0} width={physicalWidth} height={height} />
+        <rect fill="#DCA010" x={physicalWidth} y={0} width={emotionalWidth} height={height} />
+        <rect fill="#D9DC10" x={emotionalWidth + physicalWidth} y={0} width={mentalWidth} height={height} />
+        <rect fill="#bada55" x={mentalWidth + emotionalWidth + physicalWidth} y={0} width={spiritualWidth} height={height} />
+      </g>
+    </svg>
+  );
 }
 
 export default ProgressBar;
