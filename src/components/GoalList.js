@@ -21,7 +21,7 @@ const GoalList = ({ onGoalClick, goals }) => {
     console.log('total', goals[goals.length-1].text.total)
     return(
       <div className='goallist-container'>
-        <ul>
+        <ul className='parent'>
           { goals.map(goal => {
             return (
               <Goal

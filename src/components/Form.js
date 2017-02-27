@@ -21,7 +21,7 @@ export default class Form extends Component {
     <div>
       <input
         value={this.state.text}
-        placeholder='Goal'
+        placeholder='What do you want to accomplish today?'
         className='input-feild'
         onChange= {(e) => this.setState({ text: e.target.value})}
       />

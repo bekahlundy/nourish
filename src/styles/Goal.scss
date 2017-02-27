@@ -1,3 +1,5 @@
+@import 'variables';
+
 .physical, .emotional, .mental, .spiritual {
   font-size: 20px;
   border-bottom: 1px solid lightblue;
@@ -5,19 +7,19 @@
 }
 
 .physical {
-  color: blue;
+  color: $physical;
 }
 
 .emotional {
-  color: green;
+  color: $emotional;
 }
 
 .mental {
-  color: orange;
+  color: $mental;
 }
 
 .spiritual {
-  color: pink;
+  color: $spiritual;
 }
 
 .indv-goal {
