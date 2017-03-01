@@ -22,5 +22,4 @@ describe('Goal List Container', function () {
   it('should be a function', () => {
     assert.isFunction(mapStateToProps)
   })
-
 })

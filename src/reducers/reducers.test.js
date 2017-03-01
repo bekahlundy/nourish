@@ -15,25 +15,25 @@ describe('goals reducer', () => {
     expect(defaultState).to.exist
   })
 
-  it.skip('should return state with a new user property upon user login', ()=>{
-    const defaultState = goals(undefined, {})
-    const addGoal = {
-      type: 'ADD_GOAL', action: {
-        id: 1,
-        text: 'read',
-        completed: false
-      }
-    }
-    const testState = goals(defaultState, addGoal)
-    const newTitle = Object.keys(testState)
-    newTitle.reduce((obj, id) => {
-      console.log(id)
-    }, {})
-    // console.log(newTitle)
-    expect(defaultState.user).to.not.exist
-    expect(testState.user).to.exist
-    expect(newTitle).to.equal('read')
-  })
+  it('should accept action ADD_GOAL', () => {
+    const action = {
+      type: 'ADD_GOAL',
+      text: 'text',
+      id: 0,
+      completed: false
+    };
+    expect(goals( [action.text], '')).to.deep.equal(['text']);
+    expect(goals([action.id], 0)).to.deep.equal([0]);
+    expect(goals([action.completed], false)).to.deep.equal([false]);
+  });
+
+  it('should accept action TOGGLE_GOAL', () => {
+    const action = {
+      type: 'ADD_GOAL',
+      id: 0
+    };
+    expect(goals([action.id], 0)).to.deep.equal([0]);
+  });
 })
 
 describe('allReducers', () => {
