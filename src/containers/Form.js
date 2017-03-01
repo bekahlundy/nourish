@@ -5,8 +5,8 @@ import Form from '../components/Form';
 
 const mapDispatchToProps = dispatch => {
   return {
-    handleSubmit: (text, label) => {
-      dispatch(addGoal(text, label))
+    handleSubmit: (text, label, physical, emotional, mental, spiritual, total) => {
+      dispatch(addGoal(text, label, physical, emotional, mental, spiritual, total))
     }
   }
   };

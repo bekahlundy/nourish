@@ -1,8 +1,13 @@
-export const addGoal = (text, label) => {
+export const addGoal = (text, label, physical, emotional, mental, spiritual, total) => {
   return {
     type: 'ADD_GOAL',
     text,
-    label
+    label,
+    physical,
+    emotional,
+    mental,
+    spiritual,
+    total
   };
 };
 

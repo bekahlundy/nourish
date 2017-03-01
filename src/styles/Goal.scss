@@ -1,17 +1,36 @@
+@import 'variables';
+
+.physical, .emotional, .mental, .spiritual {
+  font-size: 20px;
+  border-bottom: 1px solid lightblue;
+  display: block;
+}
+
 .physical {
-  color: blue;
+  color: $physical;
 }
 
 .emotional {
-  color: green;
+  color: $emotional;
 }
 
 .mental {
-  color: orange;
+  color: $mental;
 }
 
 .spiritual {
-  color: pink;
+  color: $spiritual;
+}
+
+.indv-goal {
+  display: inline-block;
+  // float: left;
+}
+
+.check-box {
+  background-color: none;
+  width: 50px;
+  // float: left;
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/::before

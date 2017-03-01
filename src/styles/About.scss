@@ -1,4 +1,10 @@
-.about-paragraph {
-  margin: 0 auto;
-  width: 80%;
+.one-middle {
+  border: 1px solid black;
+  display: inline-block;
+  font-size: 42px;
+  border: 1px solid black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

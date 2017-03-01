@@ -1,9 +1,19 @@
+@import 'variables';
+
 .input-feild {
-  height: 30px;
-  display: block;
-  font-size: 14px;
-  margin: 10px auto;
-  width: 300px;
+border: none;
+color: black;
+outline: black;
+font-size: 1rem;
+text-indent: 5px;
+width: 60%;
+height: 2rem;
+margin: 2%;
+padding: 1%;
+}
+
+.input-feild:focus {
+  opacity: .8;
 }
 
 .categorybutton-container {
@@ -11,10 +21,58 @@
 }
 
 .physical-btn, .emotional-btn, .mental-btn, .spiritual-btn {
+  font-family:'Quicksand', sans-serif;
+	position: relative;
+	padding: 10px;
+	border: none;
+	color: white;
+	transition: .3s;
   margin: 10px;
-  border: none;
-  background-color: lightblue;
-    &:hover {
-      background-color: gray;
-    }
+}
+
+.physical-btn {
+  background: lighten($physical, 10%);
+  color: black;
+  &:hover {
+    background: darken($physical, 10%);
+  }
+  &:active,
+  &:focus {
+    background: darken($physical, 30%);
+    outline: none;
+
+  }
+}
+.emotional-btn {
+  background: $emotional;
+  &:hover {
+    background: darken($emotional, 10%);
+  }
+  &:active,
+  &:focus {
+    background: darken($emotional, 30%);
+    outline: none;
+  }
+}
+.mental-btn {
+  background: $mental;
+  &:hover {
+    background: darken($mental, 10%);
+  }
+  &:active,
+  &:focus {
+    background: darken($mental, 30%);
+    outline: none;
+  }
+}
+.spiritual-btn {
+  background: $spiritual;
+  &:hover {
+    background: darken($spiritual, 10%);
+  }
+  &:active,
+  &:focus {
+    background: darken($spiritual, 30%);
+    outline: none;
+  }
 }
