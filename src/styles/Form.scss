@@ -3,7 +3,7 @@
 .input-feild {
 border: none;
 color: black;
-outline: none;
+outline: black;
 font-size: 1rem;
 text-indent: 5px;
 width: 60%;
@@ -21,16 +21,18 @@ padding: 1%;
 }
 
 .physical-btn, .emotional-btn, .mental-btn, .spiritual-btn {
+  font-family:'Quicksand', sans-serif;
 	position: relative;
 	padding: 10px;
 	border: none;
 	color: white;
-	transition: .2s;
+	transition: .3s;
   margin: 10px;
 }
 
 .physical-btn {
-  background: $physical;
+  background: lighten($physical, 10%);
+  color: black;
   &:hover {
     background: darken($physical, 10%);
   }
@@ -38,6 +40,7 @@ padding: 1%;
   &:focus {
     background: darken($physical, 30%);
     outline: none;
+
   }
 }
 .emotional-btn {
